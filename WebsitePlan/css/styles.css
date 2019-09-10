@@ -1,0 +1,12 @@
+body {
+    background-color: grey;
+    margin: 3%;
+    font: Arial;
+}
+
+section {
+    display: inline-block
+}
+aside {
+    display: inline-block
+}
