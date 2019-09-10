@@ -3,3 +3,10 @@ body {
     margin: 10%;
     font: Arial;
 }
+
+section {
+    display: inline-block
+}
+aside {
+    display: inline-block
+}
