@@ -1,12 +1,39 @@
 body {
     background-color: grey;
-    margin: 3%;
     font: Arial;
 }
 
-section {
-    display: inline-block
+header {
+    margin-top: 50px;
 }
-aside {
-    display: inline-block
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    background: #967bb6;
+    color: purple;
+    padding: 5px;
+    font-size: 10px;
+}
+
+.navbar {
+    overflow: hidden;
+    background: #967bb6;
+    color: purple;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+}
+.navbar a {
+    float: left;
+    padding: 14px 16px;
+    display: block;
+    text-decoration: none;
+}
+.navbar a:hover{
+    background: grey;
 }

@@ -1,0 +1,17 @@
+@import url("styles.css");
+
+section {
+    vertical-align: text-top;
+    display: inline-block;
+    width: 250px;
+}
+aside {
+    vertical-align: text-top;
+    display: inline-block;
+}
+
+form {
+    font-family: Arial;
+    font-size: 16px;
+    line-height: 1.6em;
+}

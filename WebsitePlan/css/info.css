@@ -1,0 +1,36 @@
+@import url("styles.css");
+
+
+section {
+    vertical-align: text-top;
+    display: inline-block;
+    width: 300px;
+}
+aside {
+    vertical-align: text-top;
+    display: inline-block;
+}
+
+table ,th, tr {
+    border-collapse: collapse;
+    border: 1px solid black;
+}
+
+tr:nth-child(even) {
+    background-color: purple;
+}
+
+tr:hover {
+    background-color: #967bb6;
+}
+
+#first-row {
+    animation: infinite;
+    animation-name: epilepsy;
+    animation-duration: 2s;   
+}
+
+@keyframes epilepsy {
+    from {opacity: 1;}
+    to {opacity: 0.5;}
+}
