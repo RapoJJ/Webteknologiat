@@ -21,23 +21,32 @@
     <section class="contact">
         <h2>My contact info</h2>
         <p>Phone: 123123321</p>
-        <p>Email: joonas.rapo@gmail.com</p>
+        <p>Email: <a href="mailto:joonas.rapo@gmail.com">joonas.rapo@gmail.com</a></p>
         <p>Address: Skinnarilankatu 36</p>
     </section>
     <aside>
         <h2>Send me a message</h2>
-        <form>
+        <form action="contact.html">
             Name:<br>
             <input type="text"><br>
             Email:<br>
             <input type="email"><br>
             Message:<br>
-            <input type="text">
-
+            <textarea></textarea><br>
+            <input type='button' value='Send' onclick='writeLines();' />
         </form>
     </aside>
-</body>
+    <div class="googlemap">
+        <h2>Search map</h2>
+        <input id="street" type="text" placeholder="Street address">
+        <input id="city" type = "text" placeholder="City">
+        <input id="search" type='submit' value='Move map' onclick='moveMap();'/>
+        <iframe id ='map' src='https://www.google.com/maps?q=' + address + city + '&output=embed'
+            frameborder="0" ></iframe>
+    </div>
 
+    <script src="js/demo.js"></script>
+</body>
 <footer>&copy; Joonas Rapo</footer>
 
 </html>
