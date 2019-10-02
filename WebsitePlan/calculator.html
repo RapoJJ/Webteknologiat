@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+    <title>Html task one</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="shortcut icon" type="icon/ico" href="image/favicon.ico">
+</head>
+
+<body>
+    <nav class="navbar">
+        <a href="index.html">Front Page</a>
+        <a href="info.html">Information</a>
+        <a href="contact.html">Contact</a>
+        <a href="calculator.html">Calculator</a>
+    </nav>
+    <header>
+        <h1>Calculator</h1>
+    </header>
+
+
+    <div>
+        <button type="button" onclick="decreaseFirstNr();">-</button>
+        <input type="text" id="firstNumber" min="1" max="10">
+        <button type="button" onclick="increaseFirstNr();">+</button>
+
+    </div>
+
+    <div>
+        <select id="select">
+            <option value="0">+</option>
+            <option value="1">-</option>
+            <option value="2">/</option>
+            <option value="3">*</option>
+        </select>
+    </div>
+
+    <div>
+        <button type="button" onclick="decreaseSecondNr();">-</button>
+        <input type="text" id="secondNumber" min="1" max="10">
+        <button type="button" onclick="increaseSecondNr();">+</button>
+    </div>
+
+    <div>
+        <input id="math" type="submit" value="Do the math" onclick="operate();">
+    </div>
+
+    <div>
+        <p>Answer is: </p> <input id="answer" type="text">
+    </div>
+
+    <script src="js/calculator.js"></script>
+</body>
