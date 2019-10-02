@@ -22,25 +22,16 @@ class Calculator {
     
 }
 
-function decreaseFirstNr() {
-    var nr = document.getElementById("firstNumber").value;
-    document.getElementById("firstNumber").value = --nr;
+function decNr(id) {
+    var nr = document.getElementById(id).value;
+    document.getElementById(id).value = --nr;
 }
 
-function increaseFirstNr() {
-    var nr = document.getElementById("firstNumber").value;
-    document.getElementById("firstNumber").value = ++nr;
+function incrNr(id) {
+    var nr = document.getElementById(id).value;
+    document.getElementById(id).value = ++nr;
 }
 
-function increaseSecondNr() {
-    var nr = document.getElementById("secondNumber").value;
-    document.getElementById("secondNumber").value = ++nr;
-}
-
-function decreaseSecondNr() {
-    var nr = document.getElementById("secondNumber").value;
-    document.getElementById("secondNumber").value = --nr;
-}
 
 function operate() {
     var firstNr = document.getElementById("firstNumber").value
