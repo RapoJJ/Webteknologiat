@@ -1,36 +1,55 @@
-window.onload = function() {
-    //var firstNr = Math.floor((Math.random() * 10) + 1);
-    //var secondNr = Math.floor((Math.random() * 10) + 1);
+$(function () {
+    console.log("ready!");
+    let randNr = getRandom(1, 10);
 
-    document.getElementById("firstNumber").value = this.getRandom(1,10);
-    document.getElementById("secondNumber").value = this.getRandom(1,10);
-}
+    $("#firstNumber").val(randNr);
+    console.log(randNr);
 
-function getRandom (min, max) {
+    randNr = getRandom(1, 10);
+    $("#secondNumber").val(randNr);
+    console.log(randNr);
+
+    $("#dialogbox").dialog({
+        autoOpen: false
+    });
+
+    $("#dialogboxButton").dialog({
+        autoOpen: false
+    });
+});
+
+function getRandom(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor((Math.random() * max) + min);
 }
 
-class Calculator {
-    constructor(firstNr, secondNr, operator) {
-        this.firstNr = firstNr;
-        this.secondNr = secondNr;
-        this.operator = operator;
-    }
-
-    
-}
-
 function decNr(id) {
     var nr = document.getElementById(id).value;
-    document.getElementById(id).value = --nr;
+    if (nr <= 1) {
+        $("#dialogboxButton").dialog("open");
+    }
+    else {
+        document.getElementById(id).value = --nr;
+    }
 }
 
 function incrNr(id) {
     var nr = document.getElementById(id).value;
-    document.getElementById(id).value = ++nr;
+    if (nr > 9) {
+        $("#dialogboxButton").dialog("open");
+    }
+    else {
+        document.getElementById(id).value = ++nr;
+    }
 }
+
+$("#firstNumber").change(function () {
+    let value = $("#firstNumber").val();
+    if (value = undefined || value < 1 || value > 10) {
+        $("#dialogbox").dialog("open");
+    }
+});
 
 
 function operate() {
@@ -56,7 +75,7 @@ function operate() {
             break;
         default:
             console.log("Something broke!");
-            break;           
+            break;
     }
 
 }
