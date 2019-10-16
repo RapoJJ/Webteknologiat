@@ -25,13 +25,17 @@
     </header>
 
     <div id="buttons">
-        <button class="btn" id="back" onclick="backImage('currentImg')"><i class="fa fa-backward"></i></button>
-        <button class="btn" id="play"><i class="fa fa-play"></i></button>
-        <button class="btn" id="next" onclick="nextImage('currentImg')"><i class="fa fa-forward"></i></button>
+        <button class="btn" id="back" onclick="bckImg()"><i class="fa fa-backward"></i></button>
+        <button class="btn" id="play" onclick="autoplay()"><i class="fa fa-play"></i></button>
+        <button class="btn" id="next" onclick="nxtImg()"><i class="fa fa-forward"></i></button>
     </div>
 
     <div id="image">
         <img id="currentImg" src="" width="250">
+    </div>
+
+    <div id="imageTitle">
+        <p id="imgtitle"></p>
     </div>
 
     <script src="js/mediaelement.js"></script>
