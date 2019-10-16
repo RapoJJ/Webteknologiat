@@ -48,8 +48,17 @@ $("#firstNumber").change(function () {
     let value = $("#firstNumber").val();
     if (value = undefined || value < 1 || value > 10) {
         $("#dialogbox").dialog("open");
+        $("#firstNumber").val(5);
     }
 });
+
+$("#secondNumber").change(function() {
+    let value = $("#secondNumber").val();
+    if (value = undefined || value < 1 || value > 10) {
+        $("#dialogbox").dialog("open");
+        $("#secondNumber").val(5);
+    }
+})
 
 
 function operate() {

@@ -18,46 +18,48 @@
         <a href="info.html">Information</a>
         <a href="contact.html">Contact</a>
         <a href="calculator.html">Calculator</a>
+        <a href="mediaelement.html">Nala pictures</a>
     </nav>
     <header>
         <h1>Calculator</h1>
     </header>
 
     <div id="dialogbox" title="Error">
-        The number is out of range!
+        The number is out of range (1 - 10)! Value set to 5.
     </div>
 
     <div id="dialogboxButton" title="Error">
         Not allowed, number range is 1-10!
     </div>
-    <div>
-        <button type="button" onclick="decNr('firstNumber')">-</button>
-        <input type="number" id="firstNumber" min="1" max="10">
-        <button type="button" onclick="incrNr('firstNumber')">+</button>
 
-    </div>
+    <section>
+        <div id="firstNumberSelect">
+            <button type="button" onclick="decNr('firstNumber')">-</button>
+            <input type="number" id="firstNumber" min="1" max="10">
+            <button type="button" onclick="incrNr('firstNumber')">+</button>
+        </div>
 
-    <div>
-        <select id="select">
-            <option value="0">+</option>
-            <option value="1">-</option>
-            <option value="2">/</option>
-            <option value="3">*</option>
-        </select>
-    </div>
+        <div id="operationSelect">
+            <select id="select">
+                <option value="0">+</option>
+                <option value="1">-</option>
+                <option value="2">/</option>
+                <option value="3">*</option>
+            </select>
+        </div>
 
-    <div>
-        <button type="button" onclick="decNr('secondNumber')">-</button>
-        <input type="number" id="secondNumber" min="1" max="10">
-        <button type="button" onclick="incrNr('secondNumber')">+</button>
-    </div>
-
+        <div id="secondNumberSelect">
+            <button type="button" onclick="decNr('secondNumber')">-</button>
+            <input type="number" id="secondNumber" min="1" max="10">
+            <button type="button" onclick="incrNr('secondNumber')">+</button>
+        </div>
+    </section>
     <div>
         <input id="math" type="submit" value="Do the math" onclick="operate();">
     </div>
 
     <div>
-        <p>Answer is: </p> <input id="answer" type="text">
+        <p>Answer is: <input id="answer" type="text"></p>
     </div>
 
     <script src="js/calculator.js"></script>
