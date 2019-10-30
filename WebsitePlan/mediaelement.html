@@ -24,36 +24,38 @@
         <h1>Changing content in divs</h1>
     </header>
 
-    <div class="container">
-        <div id="buttons">
-            <button class="btn" id="back" onclick="bckImg()"><i class="fa fa-backward"></i></button>
-            <button class="btn" id="play" onclick="autoplay()"><i class="fa fa-play"></i></button>
-            <button class="btn" id="next" onclick="nxtImg()"><i class="fa fa-forward"></i></button>
+    <div class="entire-page">
+        <div class="buttons-container">
+            <div id="buttons">
+                <button class="btn" id="back" onclick="bckImg()"><i class="fa fa-backward"></i></button>
+                <button class="btn" id="play" onclick="autoplay()"><i class="fa fa-play"></i></button>
+                <button class="btn" id="next" onclick="nxtImg()"><i class="fa fa-forward"></i></button>
+            </div>
+
+            <div id="imageContainer">
+                <img id="currentImg" src="">
+                <p id="imgtext"></p>
+            </div>
         </div>
 
-        <div id="imageContainer">
-            <img id="currentImg" src="">
-            <p id="imgtext"></p>
-        </div>
-    </div>
-
-    <div class="grid-container">
-        <div id="gridButtons">
-            <button class="btn" id="changeGrid"><i class="fa fa-th-large"></i> Grid</button>
-            <button class="btn" id="changeList"><i class="fa fa-list"></i> List</button>
-        </div>
-        <div class="grid">
-            <div class="box a">
-                <img src="image/headtilt.jpg">
+        <div class="grid-container">
+            <div id="gridButtons">
+                <button class="btn" id="changeGrid"><i class="fa fa-th-large"></i> Grid</button>
+                <button class="btn" id="changeList"><i class="fa fa-list"></i> List</button>
             </div>
-            <div class="box b">
-                <img src="image/mighty.jpg">
-            </div>
-            <div class="box c">
-                <img src="image/sit.png">
-            </div>
-            <div class="box d">
-                <img src="image/stare.jpg">
+            <div class="grid">
+                <div class="box a">
+                    <img src="image/headtilt.jpg">
+                </div>
+                <div class="box b">
+                    <img src="image/mighty.jpg">
+                </div>
+                <div class="box c">
+                    <img src="image/sit.png">
+                </div>
+                <div class="box d">
+                    <img src="image/stare.jpg">
+                </div>
             </div>
         </div>
     </div>
