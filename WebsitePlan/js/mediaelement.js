@@ -1,6 +1,6 @@
 var dogs_json = '[{"name":"Head tilt", "src":"image/headtilt.jpg"}, {"name":"Nala sits", "src":"image/sit.png"}, {"name":"Nala Stares", "src":"image/stare.jpg"}, {"name":"Nala stares up", "src":"image/mighty.jpg"}]';
 var dogImg_array = JSON.parse(dogs_json);
-var localStorageKey = "index";
+var savedI = "index";
 
 var imageIndex;
 var imgAmount = dogImg_array.length;
@@ -9,10 +9,15 @@ var title = document.getElementById('imgtext');
 
 
 window.onload = function () {
-    this.imageIndex = 0;
+    this.imageIndex = localStorage.getItem(savedI);
+
+    if (this.imageIndex == null) {
+        this.imageIndex = 0;
+    }
+
     console.log(this.dogImg_array);
-    document.getElementById('currentImg').src = this.dogImg_array[0].src;
-    document.getElementById('imgtext').innerHTML = this.dogImg_array[0].name;
+    document.getElementById('currentImg').src = this.dogImg_array[this.imageIndex].src;
+    document.getElementById('imgtext').innerHTML = this.dogImg_array[this.imageIndex].name;
 }
 
 function nxtImg() {
@@ -20,9 +25,15 @@ function nxtImg() {
     if (imageIndex == imgAmount) {
         imageIndex = 0;
     }
-    img.src = dogImg_array[imageIndex].src;
-    title.innerHTML = dogImg_array[imageIndex].name;
+    localStorage.setItem(savedI, imageIndex);
+    //img.src = dogImg_array[imageIndex].src;
+    //title.innerHTML = dogImg_array[imageIndex].name;
     console.log(imageIndex)
+
+    $("#currentImg").fadeTo(500, 0.5, function() {
+        $("#currentImg").attr('src', dogImg_array[imageIndex].src);
+        $("#imgtext").html(dogImg_array[imageIndex].name);
+    }).fadeTo(1000, 1);
 }
 
 function bckImg() {
@@ -30,9 +41,16 @@ function bckImg() {
     if (imageIndex < 0) {
         imageIndex = imgAmount - 1;
     }
-    img.src = dogImg_array[imageIndex].src;
-    title.innerHTML = dogImg_array[imageIndex].name;
+    localStorage.setItem(savedI, imageIndex);
+    console.log(savedI);
+    //img.src = dogImg_array[imageIndex].src;
+    //title.innerHTML = dogImg_array[imageIndex].name;
     console.log(imageIndex);
+
+    $("#currentImg").fadeTo(500, 0.5, function() {
+        $("#currentImg").attr('src', dogImg_array[imageIndex].src);
+        $("#imgtext").html(dogImg_array[imageIndex].name);
+    }).fadeTo(1000, 1);
 }
 
 var intervalId;
@@ -53,3 +71,14 @@ document.getElementById("play").addEventListener("click", function (e) {
     target.classList.toggle("fa-pause");
     target.classList.toggle("fa-play");
 }, false);
+
+
+$("#changeList").click(function() {
+    console.log("something happens")
+    $(".grid").removeClass("grid").addClass("list");
+});
+
+$("#changeGrid").click(function() {
+    console.log("happening");
+    $(".list").removeClass("list").addClass("grid");
+})

@@ -1,24 +1,32 @@
 @import url("styles.css");
 
+html, body {
+    height: 100%;
+}
+
 #buttons {
     width: 300px;
     text-align: center;
 }
 
+.container {
+    display: inline-block;
+}
 .btn {
-    background-color: #967bb6; /* Blue background */
-    border: none; /* Remove borders */
-    color: black; /* White text */
-    padding: 12px 16px; /* Some padding */
-    font-size: 16px; /* Set a font size */
-    cursor: pointer; /* Mouse pointer on hover */
+    background-color: #967bb6; 
+    border: none; 
+    color: black; 
+    padding: 12px 16px;
+    font-size: 16px; 
+    cursor: pointer;
 }
   
 .btn:hover {
     background-color: purple;
+    transition: 0.4s;
 }
 
-#image {
+#imageContainer {
     width: 300px;
     height: 300px;
     background-color: #967bb6;
@@ -43,17 +51,44 @@
     margin-top: 2px;
 }
 
+.grid-container {
+    display: inline-block;
+    margin: auto;
+    position: absolute;
+    border: 5px white solid;
+    width: 300px;
+}
+
 .grid {
-    display: grid;
-    grid-template-columns: 100px 100px 100px;
-    grid-gap: 10px;
     color: #444;
+    display: grid;
+    grid-template-columns: 145px 145px;
+    grid-gap: 10px;
   }
+
+.list {
+    color: #444;
+    display: block;
+    grid-gap: 10px;
+}
 
   .box {
     background-color: #444;
-    color: #fff;
     border-radius: 5px;
     padding: 20px;
-    font-size: 150%;
   }
+
+  #changeGrid, #changeList {
+      margin: auto;
+      display: inline-block;
+  }
+
+  #gridButtons {
+      text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+}
+  
