@@ -65,7 +65,7 @@ html, body {
 .grid {
     color: #967bb6;
     display: grid;
-    grid-template-columns: 300px 300px;
+    grid-template-columns: 150px 150px;
     grid-gap: 10px;
   }
 
