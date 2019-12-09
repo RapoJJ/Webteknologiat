@@ -74,11 +74,9 @@ document.getElementById("play").addEventListener("click", function (e) {
 
 
 $("#changeList").click(function() {
-    console.log("something happens")
     $(".grid").removeClass("grid").addClass("list");
 });
 
 $("#changeGrid").click(function() {
-    console.log("happening");
     $(".list").removeClass("list").addClass("grid");
-})
+});
