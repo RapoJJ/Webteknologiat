@@ -109,6 +109,7 @@ function AlarmSet() {
     console.log(currentTime);
 
     if (alarmTime == currentTime) {
-        
+        window.alert("ALARM " + alarmTime);
+        alarmTime = null;
     }
 }

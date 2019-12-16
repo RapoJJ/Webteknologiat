@@ -1,0 +1,13 @@
+[
+    {
+        "ticketPrice": 16.00,
+        "saleAmount": {
+            "underage": 100,
+            "elderly": 50,
+            "youngster": 50,
+            "MTK": 15,
+            "conscript": 50,
+            "student": 45
+        }
+    }
+]

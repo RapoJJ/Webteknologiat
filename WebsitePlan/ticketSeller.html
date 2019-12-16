@@ -5,7 +5,7 @@
     <title>Html task one</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/timer.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="shortcut icon" type="icon/ico" href="image/favicon.ico">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/pepper-grinder/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -24,22 +24,25 @@
         <a href="ticketSeller.html">Ticket seller</a>
     </nav>
     <header>
-        <h1>Timer</h1>
+        <h1>Tickets for sale</h1>
     </header>
 
-    <canvas id="canvas" width="200" height="200" style="background-color:#333"></canvas>
-    
-    
-    <div id="timeContainer">    
-        <span>Time is now: </span>
-        <p id="time"></p>
+    <div class="container">
+        <div class="info-container">
+            <h2>Input your information</h2>
+            <form>
+                Name:<br>
+                <input type="text"><br>
+                Email:<br>
+                <input type="email"><br>
+                Age:<br>
+                <input type="age"><br>
+                <input type="button" value="Send" onclick="sendInfo()"/>
+            </form>
+        </div>
+
+
     </div>
 
-    <div id="alarmPicker">
-        <span>Set alarm: </span>
-        <input type="time" id="alarmTime" name="time" />
-        <button id="setAlarm">Set alarm</button>
-    </div>
-
-    <script src="js/timer.js"></script>
+    <script src="js/ticketSeller.js"></script>
 </body>
