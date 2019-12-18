@@ -32,17 +32,22 @@
             <h2>Input your information</h2>
             <form>
                 Name:<br>
-                <input type="text"><br>
+                <input type="text" id="name"><br>
                 Email:<br>
-                <input type="email"><br>
+                <input type="email" id="email"><br>
                 Age:<br>
-                <input type="age"><br>
-                <input type="button" value="Send" onclick="sendInfo()"/>
+                <input type="number" id="age"><br>
+
+                <label><input type="checkbox" id="student" class="group1">Student</label><br>
+                <label><input type="checkbox" id="conscript" class="group2">Conscript</label><br>
+                <label><input type="checkbox" id="mtk" class="group1">Mtk Member</label><br>
+
+                <input type="button" value="Send" onclick="sendInfo()"/><br>
+                
             </form>
         </div>
-
-
     </div>
 
     <script src="js/ticketSeller.js"></script>
+    
 </body>
