@@ -5,7 +5,7 @@
     <title>Html task one</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/ticketSeller.css">
     <link rel="shortcut icon" type="icon/ico" href="image/favicon.ico">
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/pepper-grinder/jquery-ui.css">
     <script src="http://code.jquery.com/jquery-3.4.1.min.js"></script>
@@ -42,12 +42,13 @@
                 <label><input type="checkbox" id="conscript" class="group2">Conscript</label><br>
                 <label><input type="checkbox" id="mtk" class="group1">Mtk Member</label><br>
 
-                <input type="button" value="Send" onclick="sendInfo()"/><br>
-                
+                <input type="button" id="send" value="Send" onclick="sendInfo()" /><br>
             </form>
         </div>
+        <div id="ticketInfo"></div>
     </div>
 
-    <script src="js/ticketSeller.js"></script>
     
+
+    <script src="js/ticketSeller.js"></script>
 </body>

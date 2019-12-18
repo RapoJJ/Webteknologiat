@@ -2,12 +2,12 @@
     {
         "ticketPrice": 16.00,
         "saleAmount": {
-            "underSeven": 100,
-            "elderly": 50,
-            "youngster": 50,
-            "MTK": 15,
-            "conscript": 50,
-            "student": 45
+            "underSeven": 1,
+            "elderly": 0.50,
+            "youngster": 0.50,
+            "MTK": 0.15,
+            "conscript": 0.50,
+            "student": 0.45
         }
     }
 ]

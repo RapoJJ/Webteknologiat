@@ -1,0 +1,32 @@
+@import url("styles.css");
+
+.container {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+#ticketInfo {
+  display: none;
+  width: 300px;
+  vertical-align: text-top;
+  margin-left: 100px;
+  margin-top: 50px;
+  background-color: #967bb6;
+  border-width:1px;
+  border-style:solid;
+  border-color:black;
+}
+
+.info-container {
+  display: inline-block;
+  vertical-align: text-top;
+}
+
+p {
+  font: arial;
+  font-size: 20px;
+}
+
+#buyTicket {
+  text-align: center;
+}
